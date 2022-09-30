@@ -16,8 +16,8 @@ html {
 
 .navbar {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: rgba(89, 89, 121, 0.633);
     position: sticky;
     top: 0;
@@ -27,8 +27,10 @@ html {
 
 .navbar ul {
     display: flex;
+    text-align: center;
     list-style: none;
-    margin: 20px 0px;
+    margin: auto;
+    justify-content: center;
 
 }
 
@@ -39,9 +41,11 @@ html {
 }
 
 .navbar ul li a {
+    justify-content: center;
+    margin: auto;
     text-decoration: none;
-    color: rgb(131, 241, 241);
-    padding: 8px 25px;
+    color: rgb(246, 199, 142);
+    padding: 8px 20px;
     transition: all .5s ease;
 }
 
@@ -51,17 +55,45 @@ html {
     box-shadow: 0 0 10px rgb(94, 91, 91);
 }
 
+@media screen and (max-width:375px){
+     .navbar{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-size: 15px;
+        float: none;
+    }
+
+
+    .navbar ul {
+        display: flex;
+        list-style: none;
+        margin: 10px 0px;
+    
+    }
+    
+    .navbar ul li {
+        font-family: century;
+        font-size: 10px;
+        font-weight: bold;
+    }
+}
+   
+
 /* Home section */
 .main {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+    
 }
+
 
 .infoContainer {
     background-color: rgba(153, 178, 119, 0.415);
     height: 80vh;
     width: 85vw;
-
+    flex-wrap: wrap;
     margin: 30px auto;
     display: flex;
     justify-content: space-around;
@@ -71,12 +103,15 @@ html {
 .divInfo {
     display: flex;
     justify-content: center;
+    margin: auto;
     flex-direction: column;
+    flex-wrap: wrap;    
     font-size: 40px;
     font-weight: bold;
     color: rgb(69, 82, 34);
     font-family: 'Dancing Script', cursive;
 }
+
 
 .btn1 {
     border: 3px solid rgb(167, 198, 167);
@@ -98,15 +133,14 @@ html {
 
 
 .divpic, img {
-    height: 380px;
-    width: 400px;
-    margin-top: 150px;
+    width: 500px;
+    margin-top: 30px;
     background-color: rgba(135, 113, 113, 0.239);
 
 }
 
 /* prtfolio */
-#prtfolio {
+ #prtfolio {
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5);
@@ -117,7 +151,7 @@ html {
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
 
-}
+} 
 
 .gallery {
     display: flex;
@@ -132,7 +166,7 @@ html {
     height: 288px;
     margin: 34px;
     padding: 10px;
-}
+} 
 
 
 /* footer section */
@@ -144,6 +178,7 @@ footer {
 
 .footer-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -188,8 +223,7 @@ footer {
 
 /* ABout section */
 #about {
-    height: 100%;
-    width: 100%;
+    flex-wrap: wrap;
     background-color: rgba(203, 203, 170, 0.409);
     display: flex;
     flex-direction: column;
@@ -199,6 +233,7 @@ footer {
 }
 
 .heading {
+    flex-wrap: wrap;
     font-family: 'Courier New', Courier, monospace;
     font-size: 2rem;
     font-weight: bold;
@@ -209,15 +244,16 @@ footer {
 
 #pic {
     display: flex;
+    flex-wrap: wrap;
     margin: 20px;
     padding: 20px;
 }
 
 #pic img {
+     display: flex; 
+     margin: auto; 
     background-color: rgba(164, 158, 158, 0.493);
-    width: 500px;
-    height: 500px;
-   
+    width: 400px;   
     margin-top: -25px;
     justify-content: center;
     align-items: center;
@@ -315,12 +351,11 @@ footer {
 .grid-continar4 {
     display: grid;
     background-color: rgba(148, 132, 132, 0.278);
-    height: 100%;
     width: 100%;
     border: 2px solid rgba(124, 124, 113, 0.169);
     border-radius: 30px;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 2px;
     column-gap: 2px;
     justify-content: space-around;
@@ -328,11 +363,11 @@ footer {
 
 
 img {
-    height: 350px;
-    width: 330px;
-    /* flex-wrap: wrap; */
+    width: 400px;
+    flex-wrap: wrap;
     border-radius: 20px;
-    margin: 2px;
+    margin: auto;
+    justify-content: center;
     
 }
 
@@ -357,8 +392,8 @@ img {
 
 .item3 {
     margin: 1rem;
-    grid-row: 1/2;
-    grid-column: 3/4;
+    grid-row: 2/3;
+    grid-column: 1/2;
     text-align: center;
 
 }
@@ -366,26 +401,11 @@ img {
 .item4 {
     margin: 1rem;
     grid-row: 2/3;
-    grid-column: 1/2;
-    text-align: center;
-
-}
-
-.item5 {
-    margin: 1rem;
-    grid-row: 2/3;
     grid-column: 2/3;
     text-align: center;
 
 }
 
-.item6 {
-    margin: 1rem;
-    grid-row: 2/3;
-    grid-column: 3/4;
-    text-align: center;
-
-}
 
 /* project1  */
 .flex-contanier {
@@ -426,8 +446,8 @@ img {
 }
 
 .box img {
-    width: 40vw;
-    height: 60vh;
+    width: 70vw;
+
 }
 
 
@@ -468,25 +488,80 @@ img {
 
 /* @media screen  */
 
-@media screen and (max-width: 810px) {
-    body {
-        background-color: rgb(176, 176, 241);
-    }
-}
 
-/* @media screen and (max-width:500px){
-    .navbar{
-        float: none;
-        width: 100%;
+@media screen and (max-width:375px){
+    .btn1:hover{
+        background-color: rgba(182, 182, 182, 0.772);
+        color: rgb(26, 25, 25);
+        border: 2px solid white;
+        border-radius: 10px;
+        transition: 2s;
+        font-size: 10px;
     }
-}
-
-@media screen and (max-width:500px) {
-    .grid-continar4 {
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-
+    .btn1 {
+        border: 2px solid rgb(167, 198, 167);
+        border-radius: 5px;
+        padding: 4px;
+        margin: 4px;
+        font-size: 20px;
+        font-weight: bold;
     }
+
+    .divpic, img {
+        width: 250px;
+        margin-top: 50px;
+        background-color: rgba(135, 113, 113, 0.239);
     
-} */
+    }
+
+    #prtfolio .gallery img {
+        width: 338px;
+        margin: 20px;
+        padding: 10px;
+    } 
+
+    .footer-container p {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 10px ;
+        line-height: 25px;
+        font-size: 16px;
+        color: rgb(150, 106, 191);
+        font-family: 'Dancing Script', cursive;
+    }
+
+   #about #pic img {
+        display: flex; 
+        margin: auto; 
+       background-color: rgba(164, 158, 158, 0.493);
+       width: 250px;   
+       justify-content: center;
+       align-items: center;
+   }
+
+   .grid-continar4 img  {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(148, 132, 132, 0.278);
+    width: 100%;
+    border: 2px solid rgba(124, 124, 113, 0.169);
+    border-radius: 10px;
+    font-size: 20px;
+    justify-content: space-around;
+}
+
+
+ .grid-continar4 .h24 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 10px;
+    color: rgb(79, 127, 150);
+}
+
+}
+
 
