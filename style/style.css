@@ -489,7 +489,27 @@ img {
 /* @media screen  */
 
 
-@media screen and (max-width:375px){
+@media screen and (max-width:500px) {
+
+
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: rgba(89, 89, 121, 0.633);
+        position: sticky;
+        top: 0;
+        padding: 20px;
+    }
+
+        .navbar ul li {
+            font-family: century;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    
+    
     .btn1:hover{
         background-color: rgba(182, 182, 182, 0.772);
         color: rgb(26, 25, 25);
@@ -506,6 +526,8 @@ img {
         font-size: 20px;
         font-weight: bold;
     }
+
+
 
     .divpic, img {
         width: 250px;
